@@ -5,8 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ホーム|イベント</title>
     <link rel="stylesheet" href="page_style.css">
+    <link rel="stylesheet" href="date_time/style.css">
+    <script src="date_time/script.js"></script>
+    <script src="nav.script.js"></script>
 </head>
-<body>
+<body onload="replace_date_time();">
     <header>
         <div class="header-container">
             <a href="/event/"><div class="header-logo">イベント</div></a>
@@ -15,18 +18,28 @@
     <nav>
         <div class="nav-container">
             <ul class="globalnav">
-                <li><a href="/event/" class="current">ホーム</a></li>
+                <li><a href="/event/">ホーム</a></li>
                 <li><a href="/event/#event_list">イベント一覧</a></li>
+                <!--
                 <li><a href="#info" title="ご利用いただけません"><del>イベントの情報</del></a></li>
                 <li><a href="#content" title="ご利用いただけません"><del>イベント内容</del></a></li>
+                -->
                 <li><a href="#download" title="ご利用いただけません"><del>ダウンロード</del></a></li>
-                <li><a href="/event/date_time.html" title="ご利用いただけます">日時</a></li>
+                <li><a href="/event/date_time.html" class="current">日時</a></li>
             </ul>
         </div>
     </nav>
     <main>
-        <div class="event_list" id="event_list">
-            <a href="20230812_20230813_1/index.html">2023/08/12～2023/08/13のイベント1</a>
+        <div class="clock">
+            <div class="load_">loading...</div>
+            <div id="fuu_year"></div>
+            <div id="month"></div>
+            <div id="date"></div>
+            <div id="h"></div>
+            <div id="m"></div>
+            <div id="s"></div>
+            <div id="mils" class="__"></div>
+            <button onclick="document.querySelector('.load_').classList.remove('__');setInterval(() => {replace_date_time();},1000)">更新</button>
         </div>
     </main>
 </body>
