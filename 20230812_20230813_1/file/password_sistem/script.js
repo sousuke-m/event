@@ -9,6 +9,8 @@ function keydown__(){
         console.log(`認識成功:${document.querySelector(".text").value}`);
         loadAndPlay();
         document.querySelector(".messege").innerHTML = "認識成功";
+        document.querySelector(".text").value = "";
+        document.querySelector(".text").select();
     }else{
         document.querySelector(".messege").innerHTML = "正しいパスワードを入力してからどれかのキーを押してください";
     }
