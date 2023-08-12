@@ -15,3 +15,6 @@ function keydown__(){
         document.querySelector(".messege").innerHTML = "正しいパスワードを入力してからどれかのキーを押してください";
     }
 }
+function _kanryo (){
+    document.querySelector(".kanryo").innerHTML = `<a href="page.html">開く</a>`
+}
