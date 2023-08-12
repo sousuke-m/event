@@ -11,6 +11,7 @@ function keydown__(){
         document.querySelector(".messege").innerHTML = "認識成功";
         document.querySelector(".text").value = "";
         document.querySelector(".text").select();
+        _kanryo();
     }else{
         document.querySelector(".messege").innerHTML = "正しいパスワードを入力してからどれかのキーを押してください";
     }
